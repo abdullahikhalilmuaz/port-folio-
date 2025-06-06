@@ -1,0 +1,38 @@
+.welcome {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.welcome h2 > span {
+  color: orange;
+}
+.welcome h2 {
+  margin-bottom: 0;
+}
+
+.welcome span {
+  font-weight: bolder;
+  margin: 10px 0;
+}
+.welcome button {
+  padding: 10px 10px;
+  border: none;
+  border-radius: 3px;
+  background-color: transparent;
+  color: orange;
+  border: 1px solid orange;
+  transition: 0.3s ease-in-out;
+  margin: 0 0 10px 0;
+}
+
+.welcome button:hover {
+  letter-spacing: 1px;
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+}

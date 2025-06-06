@@ -1,0 +1,193 @@
+/* Portfolio Container */
+.pf-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2em 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pf-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+/* Loading State */
+.pf-loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  padding: 2rem;
+}
+
+/* Error State */
+.pf-error {
+  text-align: center;
+  color: #e74c3c;
+  padding: 2rem;
+  background-color: #fadbd8;
+  border-radius: 5px;
+  margin: 1rem 0;
+}
+
+/* Empty State */
+.pf-empty {
+  text-align: center;
+  color: #7f8c8d;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  margin: 1rem 0;
+}
+
+/* Projects Grid */
+.pf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+/* Project Card */
+.pf-card {
+  background: rgba(255, 255, 255, 0.185);
+  border: 1px solid rgba(255, 255, 255, 0.233);
+  border-radius: 8px;
+  overflow: hidden;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pf-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Image */
+.pf-img-container {
+  height: 200px;
+  background-color: #f1f1f1;
+  position: relative;
+  overflow: hidden;
+}
+
+.pf-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.pf-card:hover .pf-img {
+  transform: scale(1.05);
+}
+
+.pf-img-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #7f8c8d;
+  background-color: #ecf0f1;
+}
+
+/* Project Content */
+.pf-content {
+  padding: 1.5rem;
+}
+
+.pf-card-title {
+  margin: 0 0 1rem 0;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.pf-description {
+  color: rgb(160, 156, 156);
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* Tags */
+.pf-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.pf-tag {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Actions */
+.pf-actions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.pf-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 1rem;
+  background-color: #000;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+}
+
+.pf-action-btn:hover {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.pf-action-btn svg {
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pf-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .pf-content {
+    padding: 1rem;
+  }
+
+  .pf-img-container {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pf-title {
+    font-size: 2rem;
+  }
+
+  .pf-grid {
+    grid-template-columns: 1fr;
+  }
+}

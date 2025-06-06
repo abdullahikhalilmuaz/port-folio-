@@ -1,0 +1,45 @@
+body {
+  background-color: black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: wheat;
+}
+.main-header {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  border-bottom: 0.1px solid rgba(255, 255, 255, 0.308);
+}
+
+.main-header .navs {
+  display: flex;
+  flex-direction: row;
+  padding: 5px 10px;
+  justify-content: space-between;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.main-header .navs > div {
+  margin: 0px 10px;
+  padding: 5px 8px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.178);
+  color: rgba(255, 255, 255, 0.808);
+}
+.main-header .navs > div:hover {
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  transform: scale(1.1);
+  font-size: 16px;
+  border: none;
+}

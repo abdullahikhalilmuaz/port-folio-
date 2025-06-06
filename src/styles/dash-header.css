@@ -1,0 +1,31 @@
+.dashboard-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 20px;
+  padding: 0px 10px;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid rgba(250, 246, 246, 0.11);
+}
+.dashboard-header ul {
+  display: flex;
+  list-style: none;
+}
+
+.dashboard-header ul li {
+  margin: 0px 10px;
+  background-color: rgba(128, 128, 128, 0.24);
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  margin-top: 10px;
+}
+
+.dashboard-header ul li:hover {
+  transform: scale(1.1);
+  background-color: gray;
+}

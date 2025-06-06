@@ -1,0 +1,25 @@
+.home-main-container {
+  position: fixed;
+  top: 60px;
+  left: 0%;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  /* background-color: orange; */
+  width: 100%;
+}
+.home-main-container::-webkit-scrollbar {
+  width: 6px;
+}
+.home-main-container::-webkit-scrollbar-thumb {
+  background-color: orange;
+  border-radius: 10px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 770px) {
+  .home-main-container {
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+}
