@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import "../styles/addProject.css";
 
-const POST_URL = "http://localhost:3000/api/projects";
+const POST_URL = "https://portfolio-server-9hh9.onrender.com/api/projects";
 
 export default function AddProject() {
   const [formData, setFormData] = useState({

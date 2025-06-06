@@ -11,7 +11,9 @@ export default function Portfolio() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/projects");
+        const response = await fetch(
+          "https://portfolio-server-9hh9.onrender.com/api/projects"
+        );
         if (!response.ok) {
           throw new Error("Failed to fetch projects");
         }
@@ -30,7 +32,7 @@ export default function Portfolio() {
   const getImageUrl = (imagePath) => {
     if (!imagePath) return null;
     if (imagePath.startsWith("http")) return imagePath;
-    return `http://localhost:3000${imagePath}`;
+    return `https://portfolio-server-9hh9.onrender.com${imagePath}`;
   };
 
   if (loading) {

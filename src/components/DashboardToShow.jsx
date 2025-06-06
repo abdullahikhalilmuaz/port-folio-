@@ -22,7 +22,9 @@ export default function DashboardToShow() {
   const fetchProjects = async () => {
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:3000/api/projects");
+      const response = await fetch(
+        "https://portfolio-server-9hh9.onrender.com/api/projects"
+      );
       if (!response.ok) {
         throw new Error("Failed to fetch projects");
       }
@@ -39,7 +41,7 @@ export default function DashboardToShow() {
   const handleDeleteProject = async (projectId) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/api/projects/${projectId}`,
+        `https://portfolio-server-9hh9.onrender.com/api/projects/${projectId}`,
         {
           method: "DELETE",
         }
@@ -132,7 +134,7 @@ export default function DashboardToShow() {
               <div className="project-image-container">
                 {project.image ? (
                   <img
-                    src={`http://localhost:5000${project.image}`}
+                    src={`https://portfolio-server-9hh9.onrender.com${project.image}`}
                     alt={project.description}
                     onError={(e) => {
                       e.target.onerror = null;
