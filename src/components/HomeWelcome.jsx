@@ -20,7 +20,7 @@ export default function HomeWelcome({ setComponentToShow }) {
         >
           View PortFolio
         </button>
-        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+        <a href="/resume.docx" target="_blank" rel="noopener noreferrer">
           <button style={{ margin: "10px 10px", fontFamily: "monospace" }}>
             View Resume
           </button>

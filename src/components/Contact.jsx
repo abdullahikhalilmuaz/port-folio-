@@ -67,14 +67,14 @@ export default function Contact() {
       <div className="main-wrapper">
         <div>
           <a
-            href="https://github.com/abdullahihmuaz/"
-            style={{ color: "white" }}
+            href="https://github.com/abdullahikhalilmuaz/"
+            style={{ color: "white", textAlign: "center" }}
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaGithub />
+            <h3>Github</h3>
           </a>
-          <h3>Github</h3>
         </div>
         <div>
           <a
@@ -84,8 +84,8 @@ export default function Contact() {
             rel="noopener noreferrer"
           >
             <FaLinkedin />
+            <h3>LinkedIn</h3>
           </a>
-          <h3>LinkedIn</h3>
         </div>
         <div>
           <a
@@ -95,8 +95,8 @@ export default function Contact() {
             rel="noopener noreferrer"
           >
             <FaFacebook />
+            <h3>Facebook</h3>
           </a>
-          <h3>Facebook</h3>
         </div>
         <div>
           <a
@@ -106,28 +106,34 @@ export default function Contact() {
             rel="noopener noreferrer"
           >
             <FaWhatsapp />
+            <h3>What'sapp</h3>
           </a>
-          <h3>What'sapp</h3>
         </div>
       </div>
       <div className="main-wrapper">
         <div>
-          <FaSlack />
-          <h3>Slack</h3>
+          <a href="mailto:muazdevy@gmail.com" style={{ color: "white" }}>
+            <FaSlack />
+            <h3>Slack</h3>
+          </a>
         </div>
         <div>
-          <FaTwitter />
-          <h3>Twitter</h3>
+          <a href="mailto:muazdevy@gmail.com" style={{ color: "white" }}>
+            <FaTwitter />
+            <h3>Twitter</h3>
+          </a>
         </div>
         <div>
-          <FaDiscord />
-          <h3>Discord</h3>
+          <a href="mailto:muazdevy@gmail.com" style={{ color: "white" }}>
+            <FaDiscord />
+            <h3>Discord</h3>
+          </a>
         </div>
         <div>
           <a href="mailto:muazdevy@gmail.com" style={{ color: "white" }}>
             <FaMailBulk />
+            <h3>Email</h3>
           </a>
-          <h3>Email</h3>
         </div>
       </div>
 

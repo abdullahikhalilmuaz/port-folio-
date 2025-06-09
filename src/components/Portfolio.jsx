@@ -2,37 +2,31 @@ import { useEffect, useState } from "react";
 import { FaComment, FaGithub, FaHashtag } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 import "../styles/portfolio.css";
+import projectImage from "../upload/project.png"; // Make sure this path is correct
 
 export default function Portfolio() {
-  const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [projects, setProjects] = useState([
+    {
+      id: 1,
+      title: "Library Circulation System",
+      description:
+        "A web based Full Stack Library Circulation and Management System, featuring all traditional library management system, converting all traditional library features into software based. Responsive Design, Eye catching designs, and fully functional.",
+      hashtags: ["LibraryCirculationSystem", "LibraryManagementSystem"],
+      githubLink:
+        "https://github.com/abdullahikhalilmuaz/library-circulation-system-client",
+      hostedLink: "https://library-circulation-system.onrender.com/",
+      comments: [],
+      image: projectImage, // Using the imported image
+    },
+  ]);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        const response = await fetch(
-          "https://portfolio-server-9hh9.onrender.com/api/projects"
-        );
-        if (!response.ok) {
-          throw new Error("Failed to fetch projects");
-        }
-        const data = await response.json();
-        setProjects(data);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchProjects();
-  }, []);
 
   const getImageUrl = (imagePath) => {
     if (!imagePath) return null;
-    if (imagePath.startsWith("http")) return imagePath;
-    return `https://portfolio-server-9hh9.onrender.com${imagePath}`;
+    if (typeof imagePath === "string" && imagePath.startsWith("http"))
+      return imagePath;
+    return imagePath; // Return the imported image directly
   };
 
   if (loading) {
