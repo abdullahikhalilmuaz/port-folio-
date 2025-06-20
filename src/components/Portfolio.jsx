@@ -3,6 +3,8 @@ import { FaComment, FaGithub, FaHashtag } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 import "../styles/portfolio.css";
 import projectImage from "../upload/project.png"; // Make sure this path is correct
+import mainprojectimage from "../upload/journal.png";
+import project1 from "../upload/project1.png";
 
 export default function Portfolio() {
   const [projects, setProjects] = useState([
@@ -17,6 +19,20 @@ export default function Portfolio() {
       hostedLink: "https://library-circulation-system.onrender.com/",
       comments: [],
       image: projectImage, // Using the imported image
+    },
+    {
+      id: Date.now(),
+      title: "Tertiaty Institutions Journal Websites",
+      description:
+        "A full stack unified digital hub for journals across al tertiary insitutions of Nigeria ",
+      hashtags: [
+        "JournalsFullStackWebsite",
+        "TertiaryInstitutionsJournalWebsite",
+      ],
+      githubLink: "https://github.com/abdullahikhalilmuaz/journals-client/",
+      hostedLink: "https://journals-dqsh.onrender.com/",
+      comments: [],
+      image: mainprojectimage, // Using the imported image
     },
   ]);
   const [loading, setLoading] = useState(false);
